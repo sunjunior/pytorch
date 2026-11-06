@@ -5,14 +5,14 @@ on:
 
 jobs:
   build:
-    runs-on: macos-13-xlarge
+    runs-on: [self-hosted, macOS, X64]
     timeout-minutes: 360
     env:
       BUILD_ENVIRONMENT: macos-x86_64
       MACOSX_DEPLOYMENT_TARGET: "11.1"
       CC: clang
       CXX: clang++
-      MAX_JOBS: "4"
+      MAX_JOBS: "2"
       BUILD_TEST: "0"
       WERROR: "0"
       # Features not suitable for Intel macOS / not needed for a CPU-only x86_64 wheel
